@@ -11,6 +11,8 @@ import android.view.ViewGroup;
 
 import com.android.oleksandrpriadko.jetpackplayground.R;
 
+import androidx.navigation.Navigation;
+
 public class NSWFragment extends Fragment {
 
     private NswViewModel mViewModel;
@@ -23,6 +25,17 @@ public class NSWFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_nsw, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+        view.findViewById(R.id.button_to_newcastle).setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_NSWFragment_to_newcastleFragment));
+
+        view.findViewById(R.id.button_to_sydney).setOnClickListener(
+            Navigation.createNavigateOnClickListener(R.id.action_NSWFragment_to_sydneyFragment));
     }
 
     @Override

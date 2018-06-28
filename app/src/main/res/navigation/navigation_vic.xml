@@ -9,5 +9,56 @@
         android:id="@+id/vicFragment"
         android:name="com.android.oleksandrpriadko.jetpackplayground.vic.VicFragment"
         android:label="vic_fragment"
-        tools:layout="@layout/fragment_vic"/>
+        tools:layout="@layout/fragment_vic">
+        <action
+            android:id="@+id/action_vicFragment_to_melbourneFragment"
+            app:destination="@id/melbourneFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_vicFragment_to_ballaratFragment"
+            app:destination="@id/ballaratFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/melbourneFragment"
+        android:name="com.android.oleksandrpriadko.jetpackplayground.vic.cities.MelbourneFragment"
+        android:label="MelbourneFragment"
+        tools:layout="@layout/fragment_melbourne">
+        <action
+            android:id="@+id/action_melbourneFragment_to_ballaratFragment"
+            app:destination="@id/ballaratFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_melbourneFragment_pop"
+            app:clearTask="true"
+            app:popUpTo="@+id/vicFragment"
+            app:popUpToInclusive="false"/>
+    </fragment>
+    <fragment
+        android:id="@+id/ballaratFragment"
+        android:name="com.android.oleksandrpriadko.jetpackplayground.vic.cities.BallaratFragment"
+        android:label="BallaratFragment"
+        tools:layout="@layout/fragment_ballarat">
+        <action
+            android:id="@+id/action_ballaratFragment_to_melbourneFragment"
+            app:destination="@id/melbourneFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_ballaratFragment_pop"
+            app:clearTask="true"
+            app:popUpTo="@+id/vicFragment"
+            app:popUpToInclusive="false"/>
+    </fragment>
 </navigation>

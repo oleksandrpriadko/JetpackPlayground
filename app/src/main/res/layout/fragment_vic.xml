@@ -39,23 +39,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="To Ballarat"
-        app:layout_constraintBottom_toTopOf="@+id/button_to_geelong"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_to_melbourne"/>
-
-    <Button
-        android:id="@+id/button_to_geelong"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginTop="8dp"
-        android:text="To Geelong"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_to_ballarat"/>
+        app:layout_constraintTop_toBottomOf="@+id/button_to_melbourne"/>
 
 </android.support.constraint.ConstraintLayout>

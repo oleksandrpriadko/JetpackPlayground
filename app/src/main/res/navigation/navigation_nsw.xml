@@ -9,5 +9,56 @@
         android:id="@+id/NSWFragment"
         android:name="com.android.oleksandrpriadko.jetpackplayground.nsw.NSWFragment"
         android:label="nsw_fragment"
-        tools:layout="@layout/fragment_nsw"/>
+        tools:layout="@layout/fragment_nsw">
+        <action
+            android:id="@+id/action_NSWFragment_to_newcastleFragment"
+            app:destination="@id/newcastleFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_NSWFragment_to_sydneyFragment"
+            app:destination="@id/sydneyFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+    </fragment>
+    <fragment
+        android:id="@+id/newcastleFragment"
+        android:name="com.android.oleksandrpriadko.jetpackplayground.nsw.cities.NewcastleFragment"
+        android:label="NewcastleFragment"
+        tools:layout="@layout/fragment_newcastle">
+        <action
+            android:id="@+id/action_newcastleFragment_to_sydneyFragment"
+            app:destination="@id/sydneyFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_newcastleFragment_pop"
+            app:clearTask="true"
+            app:popUpTo="@+id/NSWFragment"
+            app:popUpToInclusive="false"/>
+    </fragment>
+    <fragment
+        android:id="@+id/sydneyFragment"
+        android:name="com.android.oleksandrpriadko.jetpackplayground.nsw.cities.SydneyFragment"
+        android:label="SydneyFragment"
+        tools:layout="@layout/fragment_sydney">
+        <action
+            android:id="@+id/action_sydneyFragment_to_newcastleFragment"
+            app:destination="@id/newcastleFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"/>
+        <action
+            android:id="@+id/action_sydneyFragment_pop"
+            app:clearTask="true"
+            app:popUpTo="@+id/NSWFragment"
+            app:popUpToInclusive="false"/>
+    </fragment>
 </navigation>

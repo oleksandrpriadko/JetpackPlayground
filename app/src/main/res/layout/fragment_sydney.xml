@@ -12,19 +12,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:text="NSW"
+        android:text="Sydney"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toTopOf="@+id/button_to_sydney"
+        app:layout_constraintBottom_toTopOf="@+id/button_to_nsw"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
-        android:id="@+id/button_to_sydney"
+        android:id="@+id/button_to_nsw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="To Sydney"
+        android:backgroundTint="@color/colorAccent"
+        android:text="To NSW"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toTopOf="@+id/button_to_newcastle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -40,6 +42,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_to_sydney"/>
+        app:layout_constraintTop_toBottomOf="@+id/button_to_nsw"/>
 
 </android.support.constraint.ConstraintLayout>
