@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:text="Melbourne"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
+        android:theme="@style/SharedMessageStyle"
         app:layout_constraintBottom_toTopOf="@+id/button_to_vic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
