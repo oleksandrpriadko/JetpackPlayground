@@ -3,7 +3,6 @@ package com.android.oleksandrpriadko.jetpackplayground.australia;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
-import android.view.KeyEvent;
 import android.widget.TextView;
 
 import com.android.oleksandrpriadko.jetpackplayground.App;
