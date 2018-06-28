@@ -20,7 +20,7 @@ import butterknife.OnClick;
 
 public class SydneyFragment extends Fragment {
 
-    @BindView(R.id.textView_activity_message) TextView mTextViewActivityMessage;
+//    @BindView(R.id.textView_activity_message) TextView mTextViewActivityMessage;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -41,11 +41,11 @@ public class SydneyFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        ViewModelProviders
-            .of(getActivity())
-            .get(NSWShareViewModel.class)
-            .getStringMutableLiveData()
-            .observe(this, s -> mTextViewActivityMessage.setText(s));
+//        ViewModelProviders
+//            .of(getActivity())
+//            .get(NSWShareViewModel.class)
+//            .getStringMutableLiveData()
+//            .observe(this, s -> mTextViewActivityMessage.setText(s));
     }
 
     @OnClick(R.id.button_to_newcastle)

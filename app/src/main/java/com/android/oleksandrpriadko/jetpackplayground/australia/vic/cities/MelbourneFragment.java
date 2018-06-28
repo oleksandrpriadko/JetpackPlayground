@@ -20,7 +20,7 @@ import butterknife.OnClick;
 
 public class MelbourneFragment extends Fragment {
 
-    @BindView(R.id.textView_activity_message) TextView mTextViewActivityMessage;
+//    @BindView(R.id.textView_activity_message) TextView mTextViewActivityMessage;
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -36,11 +36,11 @@ public class MelbourneFragment extends Fragment {
 
         ButterKnife.bind(this, view);
 
-        ViewModelProviders
-            .of(getActivity())
-            .get(VICShareViewModel.class)
-            .getStringMutableLiveData()
-            .observe(this, s -> mTextViewActivityMessage.setText(s));
+//        ViewModelProviders
+//            .of(getActivity())
+//            .get(VICShareViewModel.class)
+//            .getStringMutableLiveData()
+//            .observe(this, s -> mTextViewActivityMessage.setText(s));
     }
 
     @OnClick(R.id.button_to_ballarat)
