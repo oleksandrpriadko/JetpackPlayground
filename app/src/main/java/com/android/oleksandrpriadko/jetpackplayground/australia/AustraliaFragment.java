@@ -1,6 +1,5 @@
-package com.android.oleksandrpriadko.jetpackplayground;
+package com.android.oleksandrpriadko.jetpackplayground.australia;
 
-import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.android.oleksandrpriadko.jetpackplayground.R;
+
 import androidx.navigation.Navigation;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -18,12 +19,6 @@ public final class AustraliaFragment extends Fragment {
 
     @BindView(R.id.button_to_nsw) Button mButtonToNSW;
     @BindView(R.id.button_to_vic) Button mButtonToVic;
-
-    private AustraliaViewModel mViewModel;
-
-    public static AustraliaFragment newInstance() {
-        return new AustraliaFragment();
-    }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -43,12 +38,4 @@ public final class AustraliaFragment extends Fragment {
         mButtonToVic.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_australiaFragment_to_vicActivity));
     }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-
-        mViewModel = ViewModelProviders.of(this).get(AustraliaViewModel.class);
-    }
-
 }

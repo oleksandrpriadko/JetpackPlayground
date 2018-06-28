@@ -5,17 +5,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".vic.VicActivity">
+    android:background="@color/colorPrimary"
+    tools:context=".australia.vic.VicActivity">
+
+    <TextView
+        android:id="@+id/textView_app_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Message from AppViewModel"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:theme="@style/SharedMessageStyle"
+        app:layout_constraintBottom_toTopOf="@id/input_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/input_layout"
+        android:layout_width="@dimen/constraint_match"
+        android:layout_height="@dimen/constraint_match"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_app_message"
+        app:theme="@style/InputLayoutStyle">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/input_activity_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Activity Message"
+            android:textColor="@android:color/white"
+            app:theme="@style/InputStyle"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33"/>
 
     <fragment
         android:id="@+id/nav_host"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="@dimen/constraint_match"
         android:layout_height="@dimen/constraint_match"
+        android:layout_margin="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline"
         app:navGraph="@navigation/navigation_vic"/>
 
 </android.support.constraint.ConstraintLayout>

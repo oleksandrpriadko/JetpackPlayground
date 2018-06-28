@@ -5,7 +5,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".nsw.NSWFragment">
+    android:background="@color/colorPrimaryDark"
+    tools:context=".australia.nsw.NSWFragment">
+
+    <TextView
+        android:id="@+id/textView_activity_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Message from Activity"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        app:layout_constraintBottom_toTopOf="@+id/textView_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/textView_title"
@@ -18,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/textView_activity_message"/>
 
     <Button
         android:id="@+id/button_to_nsw"

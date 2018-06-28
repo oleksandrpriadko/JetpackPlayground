@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/vicFragment"
-        android:name="com.android.oleksandrpriadko.jetpackplayground.vic.VicFragment"
+        android:name="com.android.oleksandrpriadko.jetpackplayground.australia.vic.VicFragment"
         android:label="vic_fragment"
         tools:layout="@layout/fragment_vic">
         <action
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/melbourneFragment"
-        android:name="com.android.oleksandrpriadko.jetpackplayground.vic.cities.MelbourneFragment"
+        android:name="com.android.oleksandrpriadko.jetpackplayground.australia.vic.cities.MelbourneFragment"
         android:label="MelbourneFragment"
         tools:layout="@layout/fragment_melbourne">
         <action
@@ -45,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/ballaratFragment"
-        android:name="com.android.oleksandrpriadko.jetpackplayground.vic.cities.BallaratFragment"
+        android:name="com.android.oleksandrpriadko.jetpackplayground.australia.vic.cities.BallaratFragment"
         android:label="BallaratFragment"
         tools:layout="@layout/fragment_ballarat">
         <action

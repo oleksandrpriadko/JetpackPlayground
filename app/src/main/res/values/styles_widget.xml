@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="InputLayoutStyle">
+        <item name="android:textColorHint">@android:color/white</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="colorAccent">@android:color/white</item>
+    </style>
+
+    <style name="InputStyle">
+        <item name="android:imeOptions">actionSend|flagNoFullscreen</item>
+        <item name="android:inputType">text</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <style name="SharedMessageStyle">
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:textAppearance">@style/Base.TextAppearance.AppCompat.Headline</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+</resources>

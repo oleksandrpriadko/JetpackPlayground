@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/NSWFragment"
-        android:name="com.android.oleksandrpriadko.jetpackplayground.nsw.NSWFragment"
+        android:name="com.android.oleksandrpriadko.jetpackplayground.australia.nsw.NSWFragment"
         android:label="nsw_fragment"
         tools:layout="@layout/fragment_nsw">
         <action
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/newcastleFragment"
-        android:name="com.android.oleksandrpriadko.jetpackplayground.nsw.cities.NewcastleFragment"
+        android:name="com.android.oleksandrpriadko.jetpackplayground.australia.nsw.cities.NewcastleFragment"
         android:label="NewcastleFragment"
         tools:layout="@layout/fragment_newcastle">
         <action
@@ -45,7 +45,7 @@
     </fragment>
     <fragment
         android:id="@+id/sydneyFragment"
-        android:name="com.android.oleksandrpriadko.jetpackplayground.nsw.cities.SydneyFragment"
+        android:name="com.android.oleksandrpriadko.jetpackplayground.australia.nsw.cities.SydneyFragment"
         android:label="SydneyFragment"
         tools:layout="@layout/fragment_sydney">
         <action

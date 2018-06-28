@@ -1,4 +1,4 @@
-package com.android.oleksandrpriadko.jetpackplayground.vic;
+package com.android.oleksandrpriadko.jetpackplayground.australia.vic;
 
 import android.arch.lifecycle.ViewModel;
 
