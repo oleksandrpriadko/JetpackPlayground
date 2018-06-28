@@ -1,6 +1,5 @@
 package com.android.oleksandrpriadko.jetpackplayground.australia.vic;
 
-import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -14,12 +13,6 @@ import com.android.oleksandrpriadko.jetpackplayground.R;
 import androidx.navigation.Navigation;
 
 public class VicFragment extends Fragment {
-
-    private VicViewModel mViewModel;
-
-    public static VicFragment newInstance() {
-        return new VicFragment();
-    }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -36,12 +29,6 @@ public class VicFragment extends Fragment {
 
         view.findViewById(R.id.button_to_ballarat).setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_vicFragment_to_ballaratFragment));
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(VicViewModel.class);
     }
 
 }

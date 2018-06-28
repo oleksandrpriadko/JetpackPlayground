@@ -24,11 +24,15 @@ public class AustraliaActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-        App.getAppViewModel().getStringLiveData().observe(
-            this, s -> mTextViewAppMessage.setText(s));
+        App.getAppViewModel()
+            .getStringLiveData()
+            .observe(this, s -> mTextViewAppMessage.setText(s));
 
         mInputAppMessage.setOnEditorActionListener((v, actionId, event) -> {
-            App.getAppViewModel().getStringLiveData().postValue(v.getText().toString());
+            App
+                .getAppViewModel()
+                .getStringLiveData()
+                .postValue(v.getText().toString());
             return false;
         });
     }

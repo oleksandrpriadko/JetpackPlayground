@@ -24,12 +24,15 @@ public class NSWActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nsw);
 
-        mNSWShareViewModel = ViewModelProviders.of(this).get(NSWShareViewModel.class);
+        mNSWShareViewModel = ViewModelProviders
+            .of(this)
+            .get(NSWShareViewModel.class);
 
         ButterKnife.bind(this);
 
-        App.getAppViewModel().getStringLiveData().observe(
-            this, s -> mTextViewAppMessage.setText(s));
+        App.getAppViewModel()
+            .getStringLiveData()
+            .observe(this, s -> mTextViewAppMessage.setText(s));
 
         mInputActivityMessage.setOnEditorActionListener((v, actionId, event) -> {
             mNSWShareViewModel.getStringMutableLiveData().postValue(v.getText().toString());

@@ -1,6 +1,5 @@
 package com.android.oleksandrpriadko.jetpackplayground.australia.nsw;
 
-import android.arch.lifecycle.ViewModelProviders;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -14,12 +13,6 @@ import com.android.oleksandrpriadko.jetpackplayground.R;
 import androidx.navigation.Navigation;
 
 public class NSWFragment extends Fragment {
-
-    private NswViewModel mViewModel;
-
-    public static NSWFragment newInstance() {
-        return new NSWFragment();
-    }
 
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -36,11 +29,5 @@ public class NSWFragment extends Fragment {
 
         view.findViewById(R.id.button_to_sydney).setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_NSWFragment_to_sydneyFragment));
-    }
-
-    @Override
-    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        mViewModel = ViewModelProviders.of(this).get(NswViewModel.class);
     }
 }

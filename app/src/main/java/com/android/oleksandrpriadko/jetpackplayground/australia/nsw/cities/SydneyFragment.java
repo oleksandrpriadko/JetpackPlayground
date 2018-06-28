@@ -41,19 +41,24 @@ public class SydneyFragment extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        ViewModelProviders.of(getActivity()).get(NSWShareViewModel.class).getStringMutableLiveData().observe(
-            this, s -> mTextViewActivityMessage.setText(s));
+        ViewModelProviders
+            .of(getActivity())
+            .get(NSWShareViewModel.class)
+            .getStringMutableLiveData()
+            .observe(this, s -> mTextViewActivityMessage.setText(s));
     }
 
     @OnClick(R.id.button_to_newcastle)
     protected void toNewcastle() {
-        Navigation.findNavController(getActivity(), R.id.nav_host)
+        Navigation
+            .findNavController(getActivity(), R.id.nav_host)
             .navigate(R.id.action_sydneyFragment_to_newcastleFragment);
     }
 
     @OnClick(R.id.button_to_nsw)
     protected void toNSW() {
-        Navigation.findNavController(getActivity(), R.id.nav_host)
+        Navigation
+            .findNavController(getActivity(), R.id.nav_host)
             .navigate(R.id.action_sydneyFragment_pop);
     }
 }

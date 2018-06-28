@@ -24,12 +24,16 @@ public class VicActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_victoria);
 
-        mVICShareViewModel = ViewModelProviders.of(this).get(VICShareViewModel.class);
+        mVICShareViewModel = ViewModelProviders
+            .of(this)
+            .get(VICShareViewModel.class);
 
         ButterKnife.bind(this);
 
-        App.getAppViewModel().getStringLiveData().observe(
-            this, s -> mTextViewAppMessage.setText(s));
+        App
+            .getAppViewModel()
+            .getStringLiveData()
+            .observe(this, s -> mTextViewAppMessage.setText(s));
 
         mInputActivityMessage.setOnEditorActionListener((v, actionId, event) -> {
             mVICShareViewModel.getStringMutableLiveData().postValue(v.getText().toString());

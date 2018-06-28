@@ -36,19 +36,24 @@ public class BallaratFragment extends Fragment {
 
         ButterKnife.bind(this, view);
 
-        ViewModelProviders.of(getActivity()).get(VICShareViewModel.class).getStringMutableLiveData().observe(
-            this, s -> mTextViewActivityMessage.setText(s));
+        ViewModelProviders
+            .of(getActivity())
+            .get(VICShareViewModel.class)
+            .getStringMutableLiveData()
+            .observe(this, s -> mTextViewActivityMessage.setText(s));
     }
 
     @OnClick(R.id.button_to_melbourne)
     protected void toMelbourne() {
-        Navigation.findNavController(getActivity(), R.id.nav_host)
+        Navigation
+            .findNavController(getActivity(), R.id.nav_host)
             .navigate(R.id.action_ballaratFragment_to_melbourneFragment);
     }
 
     @OnClick(R.id.button_to_vic)
     protected void toVIC() {
-        Navigation.findNavController(getActivity(), R.id.nav_host)
+        Navigation
+            .findNavController(getActivity(), R.id.nav_host)
             .navigate(R.id.action_ballaratFragment_pop);
     }
 }
