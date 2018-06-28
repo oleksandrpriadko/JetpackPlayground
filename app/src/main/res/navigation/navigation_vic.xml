@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/vicFragment">
+
+    <fragment
+        android:id="@+id/vicFragment"
+        android:name="com.android.oleksandrpriadko.jetpackplayground.vic.VicFragment"
+        android:label="vic_fragment"
+        tools:layout="@layout/fragment_vic"/>
+</navigation>

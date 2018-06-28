@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/australiaFragment">
+
+    <fragment
+        android:id="@+id/australiaFragment"
+        android:name="com.android.oleksandrpriadko.jetpackplayground.AustraliaFragment"
+        android:label="australia_fragment"
+        tools:layout="@layout/fragment_australia">
+        <action
+            android:id="@+id/action_australiaFragment_to_vicActivity"
+            app:destination="@id/vicActivity"/>
+        <action
+            android:id="@+id/action_australiaFragment_to_NSWActivity"
+            app:destination="@id/NSWActivity"/>
+    </fragment>
+    <activity
+        android:id="@+id/NSWActivity"
+        android:name="com.android.oleksandrpriadko.jetpackplayground.nsw.NSWActivity"
+        android:label="activity_nsw"
+        tools:layout="@layout/activity_nsw"/>
+    <activity
+        android:id="@+id/vicActivity"
+        android:name="com.android.oleksandrpriadko.jetpackplayground.vic.VicActivity"
+        android:label="activity_victoria"
+        tools:layout="@layout/activity_victoria"/>
+</navigation>
