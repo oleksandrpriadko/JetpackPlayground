@@ -12,16 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning">
-        <activity android:name=".australia.AustraliaActivity">
+        <activity
+            android:name=".australia.AustraliaActivity"
+            android:label="AUSTRALIA">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".australia.vic.VicActivity">
+        <activity
+            android:name=".australia.vic.VicActivity"
+            android:label="VIC">
         </activity>
-        <activity android:name=".australia.nsw.NSWActivity">
+        <activity
+            android:name=".australia.nsw.NSWActivity"
+            android:label="NSW">
         </activity>
     </application>
 

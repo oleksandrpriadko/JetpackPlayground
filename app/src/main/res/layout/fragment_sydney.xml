@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@android:color/white"
     tools:context=".australia.nsw.NSWFragment">
 
     <TextView
@@ -26,7 +26,6 @@
         android:layout_height="wrap_content"
         android:text="Sydney"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1"
-        android:theme="@style/SharedMessageStyle"
         app:layout_constraintBottom_toTopOf="@+id/button_to_nsw"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@android:color/holo_green_dark"
     tools:context=".australia.vic.VicActivity">
 
     <TextView
@@ -13,8 +13,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Message from AppViewModel"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
-        android:theme="@style/SharedMessageStyle"
+        android:theme="@style/AppSharedMessage"
         app:layout_constraintBottom_toTopOf="@id/input_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

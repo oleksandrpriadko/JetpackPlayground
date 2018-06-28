@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:background="@android:color/holo_blue_dark"
     tools:context=".australia.nsw.NSWActivity">
 
     <TextView
@@ -14,10 +14,12 @@
         android:layout_height="wrap_content"
         android:text="Message from AppViewModel"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
-        android:theme="@style/SharedMessageStyle"
+        android:theme="@style/AppSharedMessage"
         app:layout_constraintBottom_toTopOf="@id/input_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <android.support.design.widget.TextInputLayout
