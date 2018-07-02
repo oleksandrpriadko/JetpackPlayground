@@ -14,9 +14,9 @@ import butterknife.ButterKnife;
 
 public class VicActivity extends AppCompatActivity {
 
-//    @BindView(R.id.textView_app_message) TextView mTextViewAppMessage;
-//    @BindView(R.id.input_activity_message) TextView mInputActivityMessage;
-//    @BindView(R.id.input_app_message) TextView mInputAppMessage;
+    @BindView(R.id.textView_app_message) TextView mTextViewAppMessage;
+    @BindView(R.id.input_activity_message) TextView mInputActivityMessage;
+    @BindView(R.id.input_app_message) TextView mInputAppMessage;
 
     private VICShareViewModel mVICShareViewModel;
 
@@ -31,23 +31,23 @@ public class VicActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-//        App
-//            .getAppViewModel()
-//            .getStringLiveData()
-//            .observe(this, s -> mTextViewAppMessage.setText(s));
-//
-//        mInputActivityMessage.setOnEditorActionListener((v, actionId, event) -> {
-//            mVICShareViewModel.getStringMutableLiveData().postValue(v.getText().toString());
-//            return false;
-//        });
-//
-//        mInputAppMessage.setOnEditorActionListener((v, actionId, event) -> {
-//            App
-//                .getAppViewModel()
-//                .getStringLiveData()
-//                .postValue(v.getText().toString());
-//            return false;
-//        });
+        App
+            .getAppViewModel()
+            .getStringLiveData()
+            .observe(this, s -> mTextViewAppMessage.setText(s));
+
+        mInputActivityMessage.setOnEditorActionListener((v, actionId, event) -> {
+            mVICShareViewModel.getStringMutableLiveData().postValue(v.getText().toString());
+            return false;
+        });
+
+        mInputAppMessage.setOnEditorActionListener((v, actionId, event) -> {
+            App
+                .getAppViewModel()
+                .getStringLiveData()
+                .postValue(v.getText().toString());
+            return false;
+        });
     }
 
     @Override

@@ -14,8 +14,8 @@ import butterknife.ButterKnife;
 
 public class NSWActivity extends AppCompatActivity {
 
-//    @BindView(R.id.textView_app_message) TextView mTextViewAppMessage;
-//    @BindView(R.id.input_activity_message) TextView mInputActivityMessage;
+    @BindView(R.id.textView_app_message) TextView mTextViewAppMessage;
+    @BindView(R.id.input_activity_message) TextView mInputActivityMessage;
 
     private NSWShareViewModel mNSWShareViewModel;
 
@@ -30,14 +30,14 @@ public class NSWActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-//        App.getAppViewModel()
-//            .getStringLiveData()
-//            .observe(this, s -> mTextViewAppMessage.setText(s));
-//
-//        mInputActivityMessage.setOnEditorActionListener((v, actionId, event) -> {
-//            mNSWShareViewModel.getStringMutableLiveData().postValue(v.getText().toString());
-//            return false;
-//        });
+        App.getAppViewModel()
+            .getStringLiveData()
+            .observe(this, s -> mTextViewAppMessage.setText(s));
+
+        mInputActivityMessage.setOnEditorActionListener((v, actionId, event) -> {
+            mNSWShareViewModel.getStringMutableLiveData().postValue(v.getText().toString());
+            return false;
+        });
     }
 
     @Override

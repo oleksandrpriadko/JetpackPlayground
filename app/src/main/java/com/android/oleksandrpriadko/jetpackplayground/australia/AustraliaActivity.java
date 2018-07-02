@@ -13,8 +13,8 @@ import butterknife.ButterKnife;
 
 public class AustraliaActivity extends AppCompatActivity {
 
-//    @BindView(R.id.textView_app_message) TextView mTextViewAppMessage;
-//    @BindView(R.id.input_app_message) TextInputEditText mInputAppMessage;
+    @BindView(R.id.textView_app_message) TextView mTextViewAppMessage;
+    @BindView(R.id.input_app_message) TextInputEditText mInputAppMessage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,17 +23,17 @@ public class AustraliaActivity extends AppCompatActivity {
 
         ButterKnife.bind(this);
 
-//        App.getAppViewModel()
-//            .getStringLiveData()
-//            .observe(this, s -> mTextViewAppMessage.setText(s));
-//
-//        mInputAppMessage.setOnEditorActionListener((v, actionId, event) -> {
-//            App
-//                .getAppViewModel()
-//                .getStringLiveData()
-//                .postValue(v.getText().toString());
-//            return false;
-//        });
+        App.getAppViewModel()
+            .getStringLiveData()
+            .observe(this, s -> mTextViewAppMessage.setText(s));
+
+        mInputAppMessage.setOnEditorActionListener((v, actionId, event) -> {
+            App
+                .getAppViewModel()
+                .getStringLiveData()
+                .postValue(v.getText().toString());
+            return false;
+        });
     }
 
     @Override
