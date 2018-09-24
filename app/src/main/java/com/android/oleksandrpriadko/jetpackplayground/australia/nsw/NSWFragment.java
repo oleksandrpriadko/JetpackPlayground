@@ -27,6 +27,12 @@ public class NSWFragment extends Fragment {
         view.findViewById(R.id.button_to_newcastle).setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_NSWFragment_to_newcastleFragment));
 
+        Navigation.findNavController(getView().findViewById(R.id.button_to_newcastle))
+                .addOnNavigatedListener((controller, destination) -> {
+//                    destination.getId();
+//                    ((FragmentNavigator.Destination) destination).getFragmentClass();
+                });
+
         view.findViewById(R.id.button_to_sydney).setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_NSWFragment_to_sydneyFragment));
     }
